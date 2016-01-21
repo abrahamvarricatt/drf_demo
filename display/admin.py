@@ -3,7 +3,7 @@ from display.models import Article
 
 
 class AdminArticle(admin.ModelAdmin):
-    fields = ['author', 'pub_date']
+    list_display = ('author', 'pub_date')
 
 admin.site.register(Article, AdminArticle)
 
