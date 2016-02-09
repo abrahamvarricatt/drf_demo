@@ -60,10 +60,18 @@ WSGI_APPLICATION = 'drf_demo.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, '../database/drf_demo_db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, '../database/drf_demo_db.sqlite3'),
-    }
+        'NAME': 'drf_demo',
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': 'root',
+        'PASSWORD': 'sqlsql',
+        'HOST': 'localhost',
+        'PORT': '',
+    },
 }
 
 # Internationalization
